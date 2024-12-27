@@ -1,6 +1,7 @@
 import ava from '../../assets/images/avatar.png'
 import downloadIcon from '../../assets/images/download-icon.svg'
 import { motion } from 'framer-motion'
+import resume from '../../assets/pdf/Fresher_FE_CV.pdf'
 
 export default function About() {
     return (
@@ -38,7 +39,7 @@ export default function About() {
                         <li><span>Phone:</span> +0987654321</li>
                         <li><span>Language programming:</span> Javascript</li>
                     </motion.ul>
-                    <motion.a initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.2 }} viewport={{ once: true }} href='#' className='btn-resume'
+                    <motion.a initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.2 }} viewport={{ once: true }} href={resume} className='btn-resume'
                         download="Resume-ReactJS-PDF">Download resume <img src={downloadIcon} alt="icon" />
                     </motion.a>
                 </div>
