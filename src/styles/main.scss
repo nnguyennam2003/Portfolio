@@ -1,0 +1,21 @@
+// Import theme styles
+@import 'themes/fonts';
+@import 'themes/colors';
+
+// Import base styles
+@import 'base/reset';
+@import 'base/responsive';
+@import 'base/mixins';
+
+// Import component styles
+@import 'components/navbar';
+@import 'components/menuMobile';
+@import 'components/hero';
+@import 'components/about';
+@import 'components/skill';
+@import 'components/project';
+@import 'components/education';
+@import 'components/contact';
+@import 'components/footer';
+
+@import 'common/swiperNavButton';

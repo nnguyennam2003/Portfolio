@@ -1,0 +1,22 @@
+ .swiper-nav-btns {
+     display: flex;
+     gap: 16px;
+     justify-self: center;
+     margin-top: 24px;
+
+     button {
+         display: flex;
+         align-items: center;
+         padding: 8px;
+         color: white;
+         border: none;
+         border-radius: 50%;
+         background: linear-gradient(110deg, #0ea7e9, #0bcfd2 51%);
+         transition: .2s;
+         cursor: pointer;
+
+         &:active {
+             transform: scale(0.85);
+         }
+     }
+ }

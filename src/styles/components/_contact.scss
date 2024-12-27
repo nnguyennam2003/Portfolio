@@ -1,0 +1,117 @@
+#contact {
+    scroll-margin-top: 77px;
+    padding: 80px 8%;
+}
+
+.contact-container {
+
+
+    h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 36px;
+        background: linear-gradient(110deg, #0ea7e9, #0bcfd2 51%);
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        text-transform: uppercase;
+
+    }
+
+    .contact-content {
+        display: flex;
+        gap: 30px;
+        height: 300px;
+
+        .contact-info {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+
+            div {
+                background-color: $bg-box-item;
+                border-radius: 5px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 4rem;
+                border: 1px solid $bg-input;
+                color: $blue-text-primary;
+                cursor: pointer;
+
+                &:hover {
+                    background: linear-gradient(#131C31, #131C31) padding-box,
+                        linear-gradient(to right, rgb(14, 165, 234), rgb(11, 209, 209)) border-box;
+                    border: 1px solid transparent;
+                    box-shadow: rgba(11, 209, 209, 0.2) 0px 3px 92px;
+                    transform: translateY(-2px);
+                    transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+                }
+            }
+        }
+
+        .contact-form {
+            flex: 1;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                height: 100%;
+
+
+                div {
+                    display: flex;
+                    gap: 10px;
+
+                    input {
+                        width: 100%;
+                    }
+                }
+
+                input,
+                textarea {
+                    border: none;
+                    padding: 15px;
+                    font-size: 16px;
+                    border-radius: 5px;
+                    background: $bg-input;
+                    background: linear-gradient(#131C31, #131C31) padding-box,
+                        linear-gradient(to right, rgb(14, 165, 234), rgb(11, 209, 209)) border-box;
+                    border: 1px solid transparent;
+                    outline: none;
+                    color: $blue-text-primary;
+
+                    &:focus {
+                        transition: 0.2s;
+                        box-shadow: rgba(11, 209, 209, 0.2) 0px 3px 30px;
+                    }
+                }
+
+                textarea {
+                    height: 100%;
+                }
+
+                button {
+                    padding: 10px 0;
+                    width: 300px;
+                    margin: auto;
+                    border: none;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    background: linear-gradient(110deg, #0ea7e9 55%, #0bcfd2);
+                    font-weight: bold;
+                    font-size: 16px;
+                    color: $blue-white;
+                    transition: 0.2s ease;
+
+                    &:hover {
+                        box-shadow: rgba(11, 209, 209, 0.2) 0px 3px 30px;
+                        transform: scale(1.04);
+                    }
+                }
+            }
+        }
+    }
+}

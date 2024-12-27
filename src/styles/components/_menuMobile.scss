@@ -1,0 +1,21 @@
+.menu-mobile {
+    position: fixed;
+    top: 74px;
+    left: 0;
+    bottom: 0;
+    background-color: $dark-blue;
+    width: 60%;
+    padding: 0 26px 0 16px;
+
+    ul {
+        list-style: none;
+
+        li {
+            color: $dark-blue;
+            font-size: 18px;
+            border-bottom: 1px solid $dark-blue;
+            padding-bottom: 5px;
+            margin-top: 10px;
+        }
+    }
+}
