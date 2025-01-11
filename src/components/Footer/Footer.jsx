@@ -2,10 +2,10 @@ export default function Footer() {
     return (
         <footer>
             <div>
-                Portfolio
+                Portfolio 2025
             </div>
             <div>
-                2025
+                <a href="https://admin-portfolio-fe.netlify.app/">Admin {">"}</a>
             </div>
         </footer>
     )
