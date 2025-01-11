@@ -1,9 +1,32 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css';
-import projects from '../../data/projects';
 import SwiperNavButtons from '../SwiperNavButtons/SwiperNavButtons';
+import { Skeleton } from 'antd';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 export default function Project() {
+    const [projects, setProjects] = useState([])
+    const [isLoading, setIsLoading] = useState(false)
+
+    const getProjects = async () => {
+        setIsLoading(true)
+        try {
+            const res = await axios.get('https://backend-portfolio-smze.onrender.com/api/projects')
+            if (res && res.data) {
+                setProjects(res.data)
+                setIsLoading(false)
+            }
+        } catch (error) {
+            console.log(error)
+        } finally {
+            setIsLoading(false)
+        }
+    }
+
+    useEffect(() => {
+        getProjects()
+    }, [])
 
     return (
         <section id='project'>
@@ -40,7 +63,7 @@ export default function Project() {
                             },
                         }}
                     >
-                        {
+                        {projects.length > 0 ? (
                             projects.map((project) => (
                                 <SwiperSlide key={project.id}>
                                     <div className='project-item'>
@@ -67,16 +90,15 @@ export default function Project() {
                                     </div>
                                 </SwiperSlide>
                             ))
-                        }
-                        {/* <div className='swiper-nav-btns'>
-                            <button onClick={() => swiper.slidePrev()}>
-                                <ChevronLeft />
-                            </button>
-                            <button onClick={() => swiper.slideNext()}>
-                                <ChevronRight />
-                            </button>
-                        </div> */}
-                        <SwiperNavButtons />
+                        ) :
+                            (<div className='loading-project'>
+                                <Skeleton.Avatar shape={'square'} style={{ width: '600px', height: '320px' }} active />
+                                <Skeleton.Avatar shape={'square'} style={{ width: '600px', height: '320px' }} active />
+                            </div>)}
+
+                        <div style={{ visibility: `${isLoading ? 'hidden' : ''}` }}>
+                            <SwiperNavButtons />
+                        </div>
                     </Swiper>
                 </div>
             </div>

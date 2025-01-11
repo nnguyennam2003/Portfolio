@@ -7,7 +7,6 @@ import Navbar from './components/Navbar/Navbar'
 import Project from './components/Project/Project'
 import Skill from './components/Skill/Skill'
 
-
 function App() {
   return (
     <>
