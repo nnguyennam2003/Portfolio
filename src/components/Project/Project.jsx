@@ -65,7 +65,7 @@ export default function Project() {
                     >
                         {projects.length > 0 ? (
                             projects.map((project) => (
-                                <SwiperSlide key={project.id}>
+                                <SwiperSlide key={project._id}>
                                     <div className='project-item'>
                                         <div className='project-img'>
                                             <img src={project.image} alt="project_image" />
