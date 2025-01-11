@@ -25,7 +25,7 @@ const projects = [
     {
         id: 3,
         name: 'Chat App',
-        url_demo: 'https://chat-app-mernf.onrender.com/',
+        url_demo: 'https://chat-app-mern-yrpv.onrender.com',
         url_git: 'https://github.com/nnguyennam2003/Chat-app-MERN',
         image: chatApp,
         tech: ['React', 'NodeJS', 'Express', 'MongoDB', 'Zustand', 'Socket.io', 'Cloudinary']
