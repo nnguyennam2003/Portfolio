@@ -1,7 +1,7 @@
 import ava from '../../assets/images/avatar.png'
 import downloadIcon from '../../assets/images/download-icon.svg'
 import { motion } from 'framer-motion'
-import resume from '../../assets/pdf/Fresher_FE_CV.pdf'
+import resume from '../../assets/pdf/FE_CV.pdf'
 
 export default function About() {
     return (
