@@ -8,11 +8,12 @@ import { useEffect, useState } from 'react';
 export default function Project() {
     const [projects, setProjects] = useState([])
     const [isLoading, setIsLoading] = useState(false)
+    const api = import.meta.env.VITE_API_URL || 'http://localhost:8001/api/projects'
 
     const getProjects = async () => {
         setIsLoading(true)
         try {
-            const res = await axios.get('https://backend-portfolio-smze.onrender.com/api/projects')
+            const res = await axios.get(api)
             if (res && res.data) {
                 setProjects(res.data)
                 setIsLoading(false)
@@ -92,8 +93,8 @@ export default function Project() {
                             ))
                         ) :
                             (<div className='loading-project'>
-                                <Skeleton.Avatar shape={'square'} style={{ width: '600px', height: '320px' }} active />
-                                <Skeleton.Avatar shape={'square'} style={{ width: '600px', height: '320px' }} active />
+                                <div><Skeleton.Avatar shape={'square'} style={{ width: '100%', height: '320px' }} active /></div>
+                                <div><Skeleton.Avatar shape={'square'} style={{ width: '100%', height: '320px' }} active /></div>
                             </div>)}
 
                         <div style={{ visibility: `${isLoading ? 'hidden' : ''}` }}>

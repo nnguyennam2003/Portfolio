@@ -20,8 +20,13 @@
     .project-preview {
         .loading-project {
             display: flex;
-            width: 100%;
             justify-content: space-between;
+
+            div {
+                width: 90%;
+                display: flex;
+                justify-content: center;
+            }
         }
 
         .project-item {
