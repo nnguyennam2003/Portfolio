@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --color-lightHover: #fcf4ff;
+  --color-darkHover: #2a004a;
+  --color-darkTheme: #17153B;
+  --color-darkButton: #2E236C;
+
+  --font-outfit: "Outfit", sans-serif;
+  --font-ovo: "Ovo", serif;
+
+  --shadow-black: 4px 4px 0 #000000;
+  --shadow-purpose: 4px 4px 0 #2a004a; 
+
+  --grid-template-columns-services: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
