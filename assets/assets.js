@@ -66,24 +66,28 @@ export const assets = {
 
 export const workData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
+        title: 'Apple Store',
+        description: 'Ecommerce Website',
         bgImage: work1,
+        demo: 'https://shop-dunk-zeta.vercel.app/'
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
+        title: 'Messenger clone',
+        description: 'Chat app',
         bgImage: work2,
+        demo: 'https://chat-app-mern-yrpv.onrender.com/'
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
+        title: 'Notes',
+        description: 'Note app',
         bgImage: work3,
+        demo: 'https://note-app-mern-wheat.vercel.app/'
     },
     {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
+        title: 'Vật Vờ Shop',
+        description: 'Ecommerce Website',
         bgImage: work4,
+        demo: 'https://vat-vo-shop.vercel.app/'
     },
 ]
 
