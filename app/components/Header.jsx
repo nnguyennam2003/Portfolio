@@ -19,8 +19,8 @@ export default function Header() {
                 Web developer <br /> base in Da Nang, Vietnam.
             </motion.h1>
             <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.7 }}
-                className='max-w-2xl mx-auto font-ovo'>
-                I am a frontend web developer with a passion for creating beautiful and functional user interfaces. I have experience in HTML, CSS, JavaScript, and React, and I am always eager to learn new technologies and improve my skills.
+                className='max-w-4xl mx-auto font-ovo'>
+                I am a full stack web developer with a strong focus on building robust, scalable, and user-centric applications. Skilled in both frontend and backend technologies, I enjoy delivering complete solutions that combine great design with powerful functionality. Always eager to take on new challenges and create impactful digital products.
             </motion.p>
             <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
                 <motion.a initial={{ y: 30, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.6, delay: 0.7 }} href="https://www.linkedin.com/in/namnguyen2003/" target='_blank' className='px-10 py-3 border rounded-full  bg-black text-white flex items-center gap-2 dark:bg-darkButton dark:border-none'>LinkedIn <Linkedin className='w-4' /></motion.a>
