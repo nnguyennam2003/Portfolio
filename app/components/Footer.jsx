@@ -16,9 +16,9 @@ export default function Footer() {
             <div className='text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6'>
                 <p>&copy; 2025 Nguyen Minh Nam. All rights reserved</p>
                 <ul className='flex items-center gap-10 justify-center mt-4 sm:mt-0'>
-                    <li><a href="">Github</a></li>
-                    <li><a href="">LinkedIn</a></li>
-                    <li><a href="">Facebook</a></li>
+                    <li><a href="https://github.com/nnguyennam2003" target='_blank'>Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/namnguyen2003/" target='_blank'>LinkedIn</a></li>
+                    <li><a href="https://www.facebook.com/nmnam2003" target='_blank'>Facebook</a></li>
                 </ul>
             </div>
         </footer>

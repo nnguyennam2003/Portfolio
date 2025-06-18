@@ -19,13 +19,11 @@ export default function About({isDarkMode}) {
                 </motion.div>
                 <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.8 }} className='flex-1'>
                     <p className='mb-10 max-w-3xl font-ovo'>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        Tempore repellat pariatur fugit nihil ullam, voluptates maxime,
-                        eius praesentium dolor ipsum impedit explicabo et necessitatibus
-                        neque iure aspernatur, eum asperiores repellendus.
+                        Hi, I'm Nam, a passionate web developer with a strong background in building modern, responsive, and user-friendly websites and applications. 
+                        I enjoy turning complex problems into simple, beautiful, and intuitive digital experiences. With experience in both frontend and backend technologies, I am always eager to learn new tools and deliver high-quality solutions that make a real impact.
                     </p>
 
-                    <motion.ul initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8, delay: 1 }} className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl'>
+                    <motion.ul initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8, delay: 1 }} className='grid grid-cols-1 mx-3 sm: sm:grid-cols-3 gap-6 max-w-3xl'>
                         {infoList.map(({ icon, iconDark, title, description }, index) => (
                             <motion.li  whileInView={{scale: 1.05 }}
                              key={index} className='border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:hover:bg-darkButton dark:hover:shadow-lightHover'>
@@ -37,7 +35,7 @@ export default function About({isDarkMode}) {
                     </motion.ul>
 
                     <motion.h4 initial={{ y: 20, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.5, delay: 1.3 }} className='my-6 text-gray-700 font-ovo dark:text-white'>
-                        Tool I use
+                        Tool and Database I use :
                     </motion.h4>
                     <motion.ul initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6, delay: 1.5 }} className='flex items-center gap-3 sm:gap-5'>
                         {toolsData.map((tool, index) => (

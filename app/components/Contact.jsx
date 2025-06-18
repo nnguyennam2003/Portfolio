@@ -1,6 +1,5 @@
-'use client'
 import React from 'react'
-import { MoveRight } from 'lucide-react'
+import { Facebook, Github, Instagram, Linkedin, MoveRight } from 'lucide-react'
 import { motion } from "motion/react"
 
 export default function Contact() {
@@ -34,10 +33,15 @@ export default function Contact() {
             <motion.h4 initial={{ y: -20, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.5, delay: 0.3 }} className='text-center mb-2 text-lg font-ovo'>Connect with me</motion.h4>
             <motion.h2 initial={{ y: -20, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.5, delay: 0.5 }} className='text-center text-5xl font-ovo'>Get in touch</motion.h2>
             <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.7 }} className='text-center max-w-2xl mx-auto mt-5 mb-12 font-ovo'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ratione
-                minima in eaque voluptatum
-                temporibus.
+                Feel free to reach out if you have any questions, want to collaborate, or just want to connect. I’m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
             </motion.p>
+
+            <motion.ul initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.7 }} className='flex items-center justify-center gap-8'>
+                <li><a href="https://github.com/nnguyennam2003" target='_blank'><Github /></a></li>
+                <li><a href="https://www.linkedin.com/in/namnguyen2003/" target='_blank'><Linkedin /></a></li>
+                <li><a href="https://www.facebook.com/nmnam2003" target='_blank'><Facebook /></a></li>
+                <li><a href="https://www.instagram.com/binn_11.11/" target='_blank'><Instagram /></a></li>
+            </motion.ul>
 
             <motion.form initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.7 }} className='max-w-2xl mx-auto'>
                 <div className='flex flex-col sm:flex-row gap-6 mt-10 mb-8'>

@@ -10,13 +10,12 @@ import firebase from './firebase.png';
 import figma from './figma.png';
 import git from './git.png';
 import mongodb from './mongodb.png';
-import logo from './logo.png';
-import logo_dark from './logo_dark.png';
+import mysql from './mysql.png'
+import postgresql from './postgresql.png'
 import mail_icon from './mail_icon.png';
 import mail_icon_dark from './mail_icon_dark.png';
 import profile_img from './avatar.jpg';
 import hand_icon from './hand-icon.png';
-import header_bg_color from './header-bg-color.png';
 import moon_icon from './moon_icon.png';
 import sun_icon from './sun_icon.png';
 import arrow_icon from './arrow-icon.png';
@@ -25,10 +24,6 @@ import menu_black from './menu-black.png';
 import menu_white from './menu-white.png';
 import close_black from './close-black.png';
 import close_white from './close-white.png';
-import web_icon from './web-icon.png';
-import mobile_icon from './mobile-icon.png';
-import ui_icon from './ui-icon.png';
-import graphics_icon from './graphics-icon.png';
 import send_icon from './send-icon.png';
 import work1 from './work-1.png';
 import work2 from './work-2.png';
@@ -48,13 +43,12 @@ export const assets = {
     figma,
     git,
     mongodb,
-    logo,
-    logo_dark,
+    mysql,
+    postgresql,
     mail_icon,
     mail_icon_dark,
     profile_img,
     hand_icon,
-    header_bg_color,
     moon_icon,
     sun_icon,
     arrow_icon,
@@ -63,10 +57,6 @@ export const assets = {
     menu_white,
     close_black,
     close_white,
-    web_icon,
-    mobile_icon,
-    ui_icon,
-    graphics_icon,
     send_icon,
     work1,
     work2,
@@ -98,18 +88,18 @@ export const workData = [
 ]
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
-]
+    { icon: 'Monitor', title: 'Frontend', description: 'Building modern, responsive user interfaces.' },
+    { icon: 'Server', title: 'Backend', description: 'Developing APIs and server-side logic.' },
+    { icon: 'Layers', title: 'Fullstack', description: 'Delivering complete solutions from UI to database.' },
+    { icon: 'Palette', title: 'Web design', description: 'Designing creative and user-friendly websites.' },
+];
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science' },
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages & Framework', description: 'JavaScript, TypeScript, ReactJS, VueJS, NextJS, Java, Spring boot' },
+    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'FPT Polytechnic Da Nang' },
     { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
 ];
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
+    assets.firebase, assets.mongodb, assets.mysql, assets.postgresql, assets.figma, assets.git, assets.vscode
 ];

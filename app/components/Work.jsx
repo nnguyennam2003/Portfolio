@@ -10,9 +10,7 @@ export default function Work() {
             <motion.h4 initial={{ y: -20, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.5, delay: 0.3 }} className='text-center mb-2 text-lg font-ovo'>My Portfolio</motion.h4>
             <motion.h2 initial={{ y: -20, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.5, delay: 0.5 }} className='text-center text-5xl font-ovo'>My Projects</motion.h2>
             <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.7 }} className='text-center max-w-2xl mx-auto mt-5 mb-12 font-ovo'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ratione
-                minima in eaque voluptatum
-                temporibus.
+                Here are some of the projects I have worked on, showcasing my skills in web development, UI/UX design, and building modern, responsive applications. Each project reflects my commitment to quality and creativity.
             </motion.p>
 
             <motion.div initial={{ y: -20, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.5, delay: 0.3 }} className='grid grid-cols-services my-10 gap-5'>
