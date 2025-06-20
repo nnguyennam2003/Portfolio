@@ -1,32 +1,36 @@
-import React from 'react'
-import { Facebook, Github, Instagram, Linkedin, MoveRight } from 'lucide-react'
+'use client'
+import React, { useState } from 'react'
+import { Facebook, Github, Instagram, Linkedin, LoaderCircle, MoveRight } from 'lucide-react'
 import { motion } from "motion/react"
+import toast from 'react-hot-toast';
 
 export default function Contact() {
-    // const [result, setResult] = useState('');
+    const [isSending, setIsSending] = useState(false);
 
-    // const onSubmit = async (event) => {
-    //     event.preventDefault();
-    //     setResult("Sending....");
-    //     const formData = new FormData(event.target);
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        setIsSending(true);
+        const formData = new FormData(event.target);
 
-    //     formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+        formData.append("access_key", "c724dfa7-0af5-4487-bd61-776a497a9fc1");
 
-    //     const response = await fetch("https://api.web3forms.com/submit", {
-    //         method: "POST",
-    //         body: formData
-    //     });
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
 
-    //     const data = await response.json();
+        const data = await response.json();
 
-    //     if (data.success) {
-    //         setResult("Form Submitted Successfully");
-    //         event.target.reset();
-    //     } else {
-    //         console.log("Error", data);
-    //         setResult(data.message);
-    //     }
-    // }
+        if (data.success) {
+            setIsSending(false);
+            toast.success('Message sent successfully!');
+            event.target.reset();
+        } else {
+            console.log("Error", data);
+            setIsSending(false);
+            toast.error(data.message);
+        }
+    }
 
     return (
         <motion.div initial={{ opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 1 }} id='contact' className='w-full px-[12%] py-10 scroll-mt-20'>
@@ -43,13 +47,13 @@ export default function Contact() {
                 <li><a href="https://www.instagram.com/binn_11.11/" target='_blank'><Instagram /></a></li>
             </motion.ul>
 
-            <motion.form initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.7 }} className='max-w-2xl mx-auto'>
+            <motion.form onSubmit={onSubmit} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.7 }} className='max-w-2xl mx-auto'>
                 <div className='flex flex-col sm:flex-row gap-6 mt-10 mb-8'>
-                    <input type="text" placeholder='Enter your name' required className='flex-1 p-3 outline-none border-[0.5px] placeholder:text-gray-500 border-gray-400 rounded-md bg-white dark:bg-darkButton dark:placeholder:text-gray-200' />
-                    <input type="email" placeholder='Enter your email' required className='flex-1 p-3 outline-none border-[0.5px] placeholder:text-gray-500 border-gray-400 rounded-md bg-white dark:bg-darkButton dark:placeholder:text-gray-200' />
+                    <input type="text" name='name' placeholder='Enter your name' required className='flex-1 p-3 outline-none border-[0.5px] placeholder:text-gray-500 border-gray-400 rounded-md bg-white dark:bg-darkButton dark:placeholder:text-gray-200' />
+                    <input type="email" name='email' placeholder='Enter your email' required className='flex-1 p-3 outline-none border-[0.5px] placeholder:text-gray-500 border-gray-400 rounded-md bg-white dark:bg-darkButton dark:placeholder:text-gray-200' />
                 </div>
-                <textarea rows={6} placeholder='Enter your message' required className='w-full p-3 outline-none border-[0.5px] placeholder:text-gray-500 border-gray-400 rounded-md bg-white dark:bg-darkButton dark:placeholder:text-gray-200'></textarea>
-                <button type='submit' className='mt-3 py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto duration-500 dark:bg-darkButton dark:hover:bg-darkHover cursor-pointer'>Submit now <MoveRight className='w-6' /></button>
+                <textarea rows={6} name='message' placeholder='Enter your message' required className='w-full p-3 outline-none border-[0.5px] placeholder:text-gray-500 border-gray-400 rounded-md bg-white dark:bg-darkButton dark:placeholder:text-gray-200'></textarea>
+                <button type='submit' className='mt-3 py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto duration-500 dark:bg-darkButton dark:hover:bg-darkHover cursor-pointer disabled:opacity-65 disabled:cursor-not-allowed' disabled={isSending}>Submit now {isSending ? <LoaderCircle className='w-6 animate-spin' /> : <MoveRight className='w-6' />}</button>
             </motion.form>
         </motion.div>
     )

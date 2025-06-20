@@ -7,6 +7,7 @@ import Navbar from "./Navbar";
 import Services from "./Services";
 import Work from "./Work";
 import { useEffect, useState } from "react";
+import { Toaster } from 'react-hot-toast';
 
 export default function ClientRoot() {
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -36,6 +37,7 @@ export default function ClientRoot() {
             <Work isDarkMode={isDarkMode} />
             <Contact isDarkMode={isDarkMode} />
             <Footer isDarkMode={isDarkMode} />
+            <Toaster />
         </>
     );
 }
