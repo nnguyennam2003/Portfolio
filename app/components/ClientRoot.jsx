@@ -37,7 +37,7 @@ export default function ClientRoot() {
             <Work isDarkMode={isDarkMode} />
             <Contact isDarkMode={isDarkMode} />
             <Footer isDarkMode={isDarkMode} />
-            <Toaster />
+            <Toaster position="bottom-center"/>
         </>
     );
 }
