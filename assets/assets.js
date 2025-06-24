@@ -8,6 +8,8 @@ import project_icon_dark from './project-icon-dark.png';
 import vscode from './vscode.png';
 import firebase from './firebase.png';
 import figma from './figma.png';
+import vue from './vue.png';
+import react from './react.png';
 import git from './git.png';
 import mongodb from './mongodb.png';
 import mysql from './mysql.png'
@@ -30,6 +32,7 @@ import work2 from './work-2.png';
 import work3 from './work-3.png';
 import work4 from './work-4.png';
 
+
 export const assets = {
     user_image,
     code_icon,
@@ -41,6 +44,8 @@ export const assets = {
     vscode,
     firebase,
     figma,
+    vue,
+    react,
     git,
     mongodb,
     mysql,
@@ -105,11 +110,13 @@ export const infoList = [
 ];
 
 export const toolsData = [
-    { icon: firebase, name: "Firebase" },
-    { icon: mongodb, name: "MongoDB" },
+    { icon: react, name: "React" },
+    { icon: vue, name: "Vue" },
     { icon: mysql, name: "MySQL" },
     { icon: postgresql, name: "PostgreSQL" },
-    { icon: figma, name: "Figma" },
+    { icon: mongodb, name: "MongoDB" },
+    { icon: firebase, name: "Firebase" },
     { icon: git, name: "Git" },
-    { icon: vscode, name: "VS Code" }
+    { icon: figma, name: "Figma" },
+    { icon: vscode, name: "VS Code" },
 ];
